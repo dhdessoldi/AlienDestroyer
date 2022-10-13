@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Coração</title>
+    </head>
+    <body>
+        <canvas id="meu_canvas" width="300" height="300"></canvas>
+        <script>
+            var canvas = document.getElementById('meu_canvas');
+            var context = canvas.getContext('2d');
+
+            //propriedades
+            context.lineWidth = 2;
+            context.fillStyle = 'red';
+
+            context.beginPath();
+            context.arc(100,100,50,0,Math.PI,true);
+            context.fill();
+            context.stroke();
+
+            context.beginPath();
+            context.arc(200,100,50,0,Math.PI,true);
+            context.moveTo(250,100);
+            context.lineTo(150,250);
+            context.lineTo(50,100);
+            context.fill();
+            context.stroke();
+
+        </script>
+
+    </body>
+</html>

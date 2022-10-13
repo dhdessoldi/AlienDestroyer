@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Save & Restore</title>
+    </head>
+    <body>
+        <canvas id="meu_canvas" width="200" height="200"></canvas>
+        <script>
+            var canvas = document.getElementById('meu_canvas');
+            var context = canvas.getContext('2d');
+
+
+            //um pequeno quadrado
+            context.fillStyle = 'green';
+            context.fillRect(50, 50, 25, 25);
+
+            //salvamos a config e subimos na pilha
+            context.save();
+
+            //agora um quadrado roxo
+            context.fillStyle = 'purple';
+            context.fillRect(100, 50, 25, 25);
+
+            //voltamos para o nível anterior da pilha
+            context.restore();
+
+            //voltou para o verde!
+            context.fillRect(150, 50, 25, 25);
+        </script>
+    </body>
+
+</html>

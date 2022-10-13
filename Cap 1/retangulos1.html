@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Retângulos</title>
+</head>
+    <body>
+        <canvas id="meu_canvas" width="350" height="350"></canvas>
+        <script>
+
+            //declarando a var do canvas e contexto/conteudo
+            var canvas = document.getElementById('meu_canvas');
+            var context = canvas.getContext('2d');
+
+            //desenhando o retângulo
+            context.fillRect(50,50,100,100);
+            context.strokeRect(50,200,100,100);
+
+            //preenchimento em vermelho
+            context.fillStyle = 'red';
+            context.fillRect(200,50,100,100);
+
+            //contorno azul com espessura em 3px
+            context.lineWidth = 3;
+            context.strokeStyle = 'blue';
+            context.strokeRect(200,200,100,100);
+        </script>
+    </body>
+</html>    
